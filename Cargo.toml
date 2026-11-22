@@ -1,0 +1,21 @@
+[package]
+name = "holograms"
+version = "0.1.0"
+edition = "2024"
+description = "Strawberry first-party plugin: text, item and block holograms with colours, live text, per-player visibility, commands and an API for other plugins."
+authors = ["Strawberry Interactive LLC"]
+license = "LicenseRef-Strawberry-Source-Available-1.0"
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+strawberry-plugin-api = { version = "=0.2.2", registry = "strawberry" }
+serde_json = { version = "1", default-features = false, features = ["std"] }
+
+[package.metadata.strawberry]
+lang-parity = true
+
+# A repository of its own, not a member of a larger workspace.
+[workspace]
